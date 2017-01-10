@@ -11,9 +11,9 @@ val1 = 1
 val2 = 2
 cVal = 3
 while cVal <= 4000000:
-  if cVal % 2 == 0:
-    total += cVal
-  val1 = val2
-  val2 = cVal
-  cVal = val1 + val2
+    if cVal % 2 == 0:
+        total += cVal
+    val1 = val2
+    val2 = cVal
+    cVal = val1 + val2
 print(total)
