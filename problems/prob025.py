@@ -33,4 +33,4 @@ while len(str(cFib)) < 1000:
     cFib = fib1 + fib2
     i += 1
 
-print ('finally ' + str(i))
+print ('finally', i)

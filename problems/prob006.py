@@ -19,7 +19,7 @@ for i in range(1, 101):
     sum1 += i * i
     sum2 += i
 
- # suqare sum2  
+# suqare sum2  
 sum2 *= sum2
 
 print(sum1, sum2, sum2 - sum1)

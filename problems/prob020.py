@@ -9,17 +9,7 @@ and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
 Find the sum of the digits in the number 100!
 """
 from math import factorial
-
-def sumOfDigits(n):
-    """
-    n: a number in int / str of int
-    output: the sum of the digits in n
-    """
-    numStr = str(n)
-    total = 0
-    for digit in numStr:
-        total += int(digit)
-    return total
+from Euler import sumOfDigits
   
 product = factorial(100)
 print (sumOfDigits(product))

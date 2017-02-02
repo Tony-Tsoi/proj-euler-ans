@@ -7,20 +7,10 @@ Find the sum of all numbers which are equal to the sum of the factorial of their
 
 Note: as 1! = 1 and 2! = 2 are not sums they are not included.
 """
-import math
+from math import factorial
+from Euler import isCurious
 
-def isCurious(x):
-    """
-    x: an int to be checked
-    output: True if is a curious number
-    """
-    numStr = str(x)
-    total = 0
-    for digit in numStr:
-        total += math.factorial( int(digit) )
-    return x == total
-
-uBound = math.factorial(9)
+uBound = factorial(9)
 
 t = 0
 

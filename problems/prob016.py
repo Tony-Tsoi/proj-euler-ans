@@ -5,16 +5,7 @@ Problem 16
 
 What is the sum of the digits of the number 2^1000?
 """
-def sumOfDigits(n):
-    """
-    n: a number in int / str of int
-    output: the sum of the digits in n
-    """
-    numStr = str(n)
-    total = 0
-    for digit in numStr:
-        total += int(digit)
-    return total
+from Euler import sumOfDigits
 
 num = 2**1000
 print (sumOfDigits(num))

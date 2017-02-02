@@ -5,19 +5,11 @@ Problem 5
 
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 """
-def isDivRange(x, n):
-    """
-    x is the int to be tested
-    n is the range to test from 2 inclusive to n inclusive
-    """
-    for i in range(n, 1, -1):
-        if x % i is not 0:
-            return False
-    return True
+from Euler import isDivRange
 
 cNum = 2520
 
-while not isDivRange(cNum, 20):
+while not isDivRange(cNum, range(20, 1, -1)):
     cNum += 20
-    
+
 print (cNum)

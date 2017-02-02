@@ -1,6 +1,4 @@
 """
-Problem 92
-
 A number chain is created by continuously adding the square of the digits in a number to form a new number until it has been seen before.
 
 For example,
@@ -29,12 +27,12 @@ def sqDig(n):
 counter = 0
 for i in range(2, 10000000):
     cNum = i
-    while (True):
+    while True:
         cNum = sqDig(cNum)
         if cNum is 1:
             break
         if cNum is 89:
-          counter += 1
-          break
+            counter += 1
+            break
 
 print(counter)
