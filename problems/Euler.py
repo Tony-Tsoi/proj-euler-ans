@@ -1,8 +1,7 @@
 """
-These are the methods that was commonly used for solving 
+These are the methods that are commonly used for solving 
 my Project Euler questions.
 """
-
 import math
 
 def isPrime(n):
@@ -44,6 +43,17 @@ def sumOfDigits(n):
     total = 0
     for digit in numStr:
         total += int(digit)
+    return total
+
+def sumOfDigFac(n):
+    """
+    n: an int / str of int
+    output: the sum of the factorials of the digits in n
+    """
+    numStr = str(n)
+    total = 0
+    for digit in numStr:
+        total += math.factorial(int(digit))
     return total
 
 def isPalindrome(n):
@@ -114,3 +124,57 @@ def nCr(n, r):
     output: the value of nCr
     """
     return int( math.factorial(n) / ( math.factorial(r) * math.factorial(n-r) ))
+
+def isPandigital(n):
+    """
+    n: an int
+    output: True if is a pandigital
+    """
+    if len(str(n)) > 10:
+        return False
+    
+    numStrList = list(str(n))
+    
+    if len(str(n)) is 10:
+        numList = list(range(10))
+    else:
+        numList = list(range(1, len(str(n))+1))
+    
+    for num in numList:
+        if str(num) not in numStrList:
+            return False
+    return True
+
+
+def contains(n, L):
+    """
+    n: an int or a str of int
+    L: a list of int w/ len = 1
+    output: True if n contains at least one elem in L
+    """
+    numStrList = list(str(n))
+    for num in L:
+        if num in numStrList:
+            return True
+    return False
+
+def pFac(n):
+    """
+    n: an int
+    output: a set of distinct prime factors
+    """
+    if n < 2 or isPrime(n):
+        return []
+    
+    pSet = set()
+    i = 2
+    while i <= n:
+        while n % i is 0:
+            pSet.add(i)
+            n = int(n / i)
+        i = nextPrime(i)
+    return pSet
+
+if __name__ == "__main__":
+    print('These are the methods that are commonly '
+        + 'used for solving my Project Euler questions.')
